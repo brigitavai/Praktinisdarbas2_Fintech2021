@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Praktinisdarbas2_Fintech2021</string>
+    <string name="btn_calculate">Calculate</string>
+    <string name="CharSelection">Char</string>
+    <string name="getCharsCount">CharCount</string>
+    <string name="btn_calculate_caption">Calculate</string>
 </resources>
