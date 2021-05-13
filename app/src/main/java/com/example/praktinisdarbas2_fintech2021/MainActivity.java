@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 import static com.example.praktinisdarbas2_fintech2021.utils.ElementsCalculator.getCharsCount;
+import static com.example.praktinisdarbas2_fintech2021.utils.ElementsCalculator.getCharsCount2;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
         this.tvOutput = findViewById(R.id.tvOutput);
 
         ArrayList<String> selectionOptionsList = new ArrayList<>();
-        selectionOptionsList.add("Chars");
-        selectionOptionsList.add("Words");
+        selectionOptionsList.add(getResources().getString(R.string.CharSelection));
+        selectionOptionsList.add(getResources().getString(R.string.WordSelection));
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<> (this, android.R.layout.simple_spinner_item, selectionOptionsList);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         this.ddSelection.setAdapter(arrayAdapter);
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         String userInputText = edUserInput.getText().toString();
 
         String selection = this.ddSelection.getSelectedItem().toString();
+
         String resValue = getResources().getString(R.string.CharSelection);
         Toast.makeText(this,String.valueOf(resValue), Toast.LENGTH_SHORT).show();
 
@@ -53,6 +55,16 @@ public class MainActivity extends AppCompatActivity {
             int count = getCharsCount(userInputText);
             tvOutput.setText(String.valueOf(count));
         }
+
+        String[] userInputText2 = edUserInput.getText().toString().split(" ");
+        String resValue2 = getResources().getString(R.string.WordSelection);
+        Toast.makeText(this,String.valueOf(resValue2), Toast.LENGTH_SHORT).show();
+
+        if (selection.equalsIgnoreCase(resValue2)) {
+            int count2 = getCharsCount2(userInputText2);
+            tvOutput.setText(String.valueOf(count2));
+        }
+
     }
 
 
