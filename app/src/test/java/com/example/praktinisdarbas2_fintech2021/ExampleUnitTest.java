@@ -44,9 +44,9 @@ public class ExampleUnitTest {
 
     @Test
     public void TextCountChars04(){
-        final String givenString = "  ,   . ";
+        final String givenString = "labas, pasauli!";
 
-        final int expectedResult = 8;
+        final int expectedResult = 15;
         final int actualResult = ElementsCalculator.getCharsCount(givenString);
 
         assertEquals(expectedResult, actualResult);
@@ -84,9 +84,9 @@ public class ExampleUnitTest {
 
     @Test
     public void TextCountWords04(){
-        final String givenString = "  ,  . ";
+        final String givenString = "labas, pasauli!";
 
-        final int expectedResult = 3;
+        final int expectedResult = 2;
         final int actualResult = ElementsCalculator.getCharsCount2(givenString);
 
         assertEquals(expectedResult, actualResult);
