@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             tvOutput.setText(String.valueOf(count));
         }
 
-        String[] userInputText2 = edUserInput.getText().toString().split(" ");
+        String userInputText2 = edUserInput.getText().toString();
         String resValue2 = getResources().getString(R.string.WordSelection);
         Toast.makeText(this,String.valueOf(resValue2), Toast.LENGTH_SHORT).show();
 

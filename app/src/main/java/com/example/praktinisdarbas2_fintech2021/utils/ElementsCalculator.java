@@ -8,10 +8,12 @@ public class ElementsCalculator {
         return 0;
     }
 
-    public static int getCharsCount2(String[] inputText2) {
-        if (inputText2 != null ) {
-            return inputText2.length;
+    public static int getCharsCount2(String inputText2) {  //WORDS
+        if (inputText2.isEmpty()) return 0;
+            return inputText2.split("\\s+").length;
         }
-        return 0;
-    }
+
+
+
+
 }
